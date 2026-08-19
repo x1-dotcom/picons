@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="360" viewBox="0 0 1600 360" role="img" aria-label="X1 Picons Canonical Model">
+<rect width="1600" height="360" rx="24" fill="#080D12"/>
+<text x="70" y="62" font-family="Arial Black,Arial,sans-serif" font-size="34" fill="#FFFFFF">X1 // CANONICAL VISUAL MODEL</text>
+<text x="70" y="96" font-family="monospace" font-size="16" fill="#78929A" letter-spacing="4">IDENTITY FIRST · ARTWORK SECOND</text>
+<g font-family="Arial,Helvetica,sans-serif">
+  <g transform="translate(70 142)"><rect width="250" height="116" rx="14" fill="#0D171D" stroke="#20F6FF"/><text x="24" y="42" font-size="18" fill="#20F6FF">01</text><text x="24" y="78" font-size="27" font-weight="700" fill="#fff">STABLE ID</text><text x="24" y="102" font-size="15" fill="#91A9AF">bbc-one · rtp-1 · rai-1</text></g>
+  <path d="M338 200h92" stroke="#294A52" stroke-width="3"/><path d="M416 190l16 10-16 10" fill="#294A52"/>
+  <g transform="translate(448 142)"><rect width="250" height="116" rx="14" fill="#0D171D" stroke="#7CFFB2"/><text x="24" y="42" font-size="18" fill="#7CFFB2">02</text><text x="24" y="78" font-size="27" font-weight="700" fill="#fff">COUNTRY</text><text x="24" y="102" font-size="15" fill="#91A9AF">ISO alpha-2 scope</text></g>
+  <path d="M716 200h92" stroke="#294A52" stroke-width="3"/><path d="M794 190l16 10-16 10" fill="#294A52"/>
+  <g transform="translate(826 142)"><rect width="250" height="116" rx="14" fill="#0D171D" stroke="#F5FF82"/><text x="24" y="42" font-size="18" fill="#F5FF82">03</text><text x="24" y="78" font-size="27" font-weight="700" fill="#fff">SOURCE</text><text x="24" y="102" font-size="15" fill="#91A9AF">origin · rights · aliases</text></g>
+  <path d="M1094 200h92" stroke="#294A52" stroke-width="3"/><path d="M1172 190l16 10-16 10" fill="#294A52"/>
+  <g transform="translate(1204 142)"><rect width="320" height="116" rx="14" fill="#0D171D" stroke="#A78BFA"/><text x="24" y="42" font-size="18" fill="#A78BFA">04</text><text x="24" y="78" font-size="27" font-weight="700" fill="#fff">ARTWORK</text><text x="24" y="102" font-size="15" fill="#91A9AF">SVG · PNG · WebP</text></g>
+</g>
+<text x="70" y="322" font-family="monospace" font-size="17" fill="#7CFFB2">CONSUMERS RESOLVE BY ID + COUNTRY + ALIASES — NOT BY GUESSING FILE NAMES.</text>
+</svg>

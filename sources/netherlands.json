@@ -1,0 +1,41 @@
+{
+  "country": "NL",
+  "channels": [
+    {
+      "id": "npo-1",
+      "name": "NPO 1",
+      "country": "NL",
+      "category": "general",
+      "path": "countries/nl/npo-1.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/NPO_1_logo_2014.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:NPO_1_logo_2014.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["NPO1", "NPO 1 HD"]
+    },
+    {
+      "id": "npo-2",
+      "name": "NPO 2",
+      "country": "NL",
+      "category": "general",
+      "path": "countries/nl/npo-2.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/NPO_2_logo_2014.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:NPO_2_logo_2014.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["NPO2", "NPO 2 HD"]
+    },
+    {
+      "id": "npo-3",
+      "name": "NPO 3",
+      "country": "NL",
+      "category": "general",
+      "path": "countries/nl/npo-3.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/NPO_3_logo_2018.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:NPO_3_logo_2018.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["NPO3", "NPO 3 HD"]
+    }
+  ]
+}

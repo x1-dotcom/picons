@@ -24,6 +24,18 @@
       "license": "Public domain (PD-textlogo); trademarked",
       "trademarked": true,
       "aliases": ["Rede Bandeirantes", "Bandeirantes", "Band HD"]
+    },
+    {
+      "id": "sbt",
+      "name": "SBT",
+      "country": "BR",
+      "category": "general",
+      "path": "countries/br/sbt.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/SBT_logo.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:SBT_logo.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["Sistema Brasileiro de Televisão", "SBT HD"]
     }
   ]
 }

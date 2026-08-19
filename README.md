@@ -31,9 +31,13 @@ picons/
 │   ├── schema.json
 │   ├── index.json
 │   ├── sync-report.json
+│   ├── coverage.json
+│   ├── legacy-audit.json
 │   └── legacy-duplicate-candidates.json
 ├── tools/
 │   ├── audit_manifests.py
+│   ├── audit_legacy.py
+│   ├── coverage_report.py
 │   ├── sync_sources.py
 │   └── validate_index.py
 └── legacy root PNGs (temporary compatibility)
@@ -90,9 +94,9 @@ Example:
 
 ## Automated synchronization
 
-The GitHub workflow audits source manifests, downloads approved assets, validates payload type and size, computes SHA-256, regenerates `data/index.json`, writes `data/sync-report.json` and maintains `ATTRIBUTION.md`.
+The GitHub workflow audits source manifests, downloads approved assets, validates payload type and size, computes SHA-256, regenerates `data/index.json`, writes `data/sync-report.json`, generates coverage/legacy-audit telemetry and maintains `ATTRIBUTION.md`.
 
-The sync is configured for manual execution, manifest/tool changes and a six-hour schedule.
+The sync is configured for manual execution, manifest/tool changes and a six-hour schedule. For the exact operational procedure and expected outputs, see [RUN_SYNC.md](./RUN_SYNC.md).
 
 ## Migration policy
 

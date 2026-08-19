@@ -1,0 +1,53 @@
+{
+  "country": "IT",
+  "channels": [
+    {
+      "id": "rai-2",
+      "name": "Rai 2",
+      "country": "IT",
+      "category": "general",
+      "path": "countries/it/rai-2.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rai_2_logo.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Rai_2_logo.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["RAI 2", "Rai Due", "Rai 2 HD"]
+    },
+    {
+      "id": "rai-3",
+      "name": "Rai 3",
+      "country": "IT",
+      "category": "general",
+      "path": "countries/it/rai-3.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rai_3_logo.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Rai_3_logo.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["RAI 3", "Rai Tre", "Rai 3 HD"]
+    },
+    {
+      "id": "rete-4",
+      "name": "Rete 4",
+      "country": "IT",
+      "category": "general",
+      "path": "countries/it/rete-4.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rete_4_-_Logo_2018.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Rete_4_-_Logo_2018.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["Rete4", "Rete 4 HD"]
+    },
+    {
+      "id": "italia-1",
+      "name": "Italia 1",
+      "country": "IT",
+      "category": "general",
+      "path": "countries/it/italia-1.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Italia_1_logo.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Italia_1_logo.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["Italia1", "Italia 1 HD"]
+    }
+  ]
+}

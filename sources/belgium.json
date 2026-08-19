@@ -1,0 +1,29 @@
+{
+  "country": "BE",
+  "channels": [
+    {
+      "id": "vtm",
+      "name": "VTM",
+      "country": "BE",
+      "category": "general",
+      "path": "countries/be/vtm.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/VTM_logo_2024_(solid_colour).svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:VTM_logo_2024_(solid_colour).svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["VTM HD"]
+    },
+    {
+      "id": "rtbf-la-une",
+      "name": "RTBF La Une",
+      "country": "BE",
+      "category": "general",
+      "path": "countries/be/rtbf-la-une.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RTBF_la_une_logo_2025.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RTBF_la_une_logo_2025.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["La Une", "RTBF La 1"]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "country": "US",
+  "channels": [
+    {
+      "id": "abc",
+      "name": "ABC",
+      "country": "US",
+      "category": "general",
+      "path": "countries/us/abc.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/ABC-2021-LOGO.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:ABC-2021-LOGO.svg",
+      "license": "Public domain / CC BY-SA 4.0; trademarked",
+      "trademarked": true,
+      "aliases": ["ABC Network", "American Broadcasting Company"]
+    },
+    {
+      "id": "nbc",
+      "name": "NBC",
+      "country": "US",
+      "category": "general",
+      "path": "countries/us/nbc.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/NBC_Peacock_(2022).svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:NBC_Peacock_(2022).svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["NBC Network", "National Broadcasting Company"]
+    },
+    {
+      "id": "cbs",
+      "name": "CBS",
+      "country": "US",
+      "category": "general",
+      "path": "countries/us/cbs.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/CBS_Eyemark.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:CBS_Eyemark.svg",
+      "license": "Public domain (simple geometry); trademarked",
+      "trademarked": true,
+      "aliases": ["CBS Network", "Columbia Broadcasting System"]
+    },
+    {
+      "id": "fox",
+      "name": "FOX",
+      "country": "US",
+      "category": "general",
+      "path": "countries/us/fox.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Fox_Broadcasting_Company_logo_(2019).svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Fox_Broadcasting_Company_logo_(2019).svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["Fox", "FOX Network", "Fox Broadcasting Company"]
+    }
+  ]
+}

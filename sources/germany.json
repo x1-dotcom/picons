@@ -1,0 +1,41 @@
+{
+  "country": "DE",
+  "channels": [
+    {
+      "id": "das-erste",
+      "name": "Das Erste",
+      "country": "DE",
+      "category": "general",
+      "path": "countries/de/das-erste.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Das_Erste_2014.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Das_Erste_2014.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["ARD", "Das Erste HD"]
+    },
+    {
+      "id": "zdf",
+      "name": "ZDF",
+      "country": "DE",
+      "category": "general",
+      "path": "countries/de/zdf.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/ZDF_logo.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:ZDF_logo.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["ZDF HD"]
+    },
+    {
+      "id": "rtl-de",
+      "name": "RTL",
+      "country": "DE",
+      "category": "general",
+      "path": "countries/de/rtl.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RTL_Logo_2021.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RTL_Logo_2021.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["RTL Television", "RTL HD"]
+    }
+  ]
+}

@@ -10,6 +10,7 @@ on:
     paths:
       - 'sources/*.json'
       - 'tools/sync_sources.py'
+      - 'tools/audit_manifests.py'
       - 'tools/validate_index.py'
       - '.github/workflows/sync-picons.yml'
 
@@ -40,6 +41,9 @@ jobs:
         run: |
           echo 'Approved source manifests:'
           find sources -maxdepth 1 -type f -name '*.json' -print | sort
+
+      - name: Audit source manifests
+        run: python tools/audit_manifests.py
 
       - name: Sync approved picon sources
         run: python tools/sync_sources.py

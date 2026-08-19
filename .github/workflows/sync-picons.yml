@@ -3,23 +3,41 @@ name: Sync X1 Picons
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
     paths:
-      - 'sources/**.json'
+      - 'sources/*.json'
       - 'tools/sync_sources.py'
+      - 'tools/validate_index.py'
       - '.github/workflows/sync-picons.yml'
 
 permissions:
   contents: write
 
+concurrency:
+  group: x1-picons-sync-main
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+    timeout-minutes: 15
 
-      - uses: actions/setup-python@v5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
+      - name: Show source manifests
+        run: |
+          echo 'Approved source manifests:'
+          find sources -maxdepth 1 -type f -name '*.json' -print | sort
 
       - name: Sync approved picon sources
         run: python tools/sync_sources.py
@@ -27,14 +45,26 @@ jobs:
       - name: Validate index
         run: python tools/validate_index.py
 
+      - name: Show generated coverage
+        run: |
+          python - <<'PY'
+          import json
+          from collections import Counter
+          data = json.load(open('data/index.json', encoding='utf-8'))
+          channels = data.get('channels', [])
+          print('Total channels:', len(channels))
+          print('By country:', dict(sorted(Counter(x['country'] for x in channels).items())))
+          PY
+
       - name: Commit refreshed picons
         run: |
           if git diff --quiet && [ -z "$(git status --porcelain)" ]; then
-            echo "No picon changes"
+            echo 'No picon changes'
             exit 0
           fi
-          git config user.name "x1-picons-bot"
-          git config user.email "x1-picons-bot@users.noreply.github.com"
+          git config user.name 'x1-picons-bot'
+          git config user.email 'x1-picons-bot@users.noreply.github.com'
           git add countries data/index.json ATTRIBUTION.md
-          git commit -m "Sync current X1 picons"
-          git push
+          git commit -m 'Sync current X1 picons'
+          git pull --rebase origin main
+          git push origin HEAD:main

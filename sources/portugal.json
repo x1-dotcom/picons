@@ -14,6 +14,42 @@
       "aliases": ["RTP1", "RTP 1 HD"]
     },
     {
+      "id": "rtp-2",
+      "name": "RTP 2",
+      "country": "PT",
+      "category": "general",
+      "path": "countries/pt/rtp-2.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RTP2_2026.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RTP2_2026.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["RTP2", "RTP 2 HD"]
+    },
+    {
+      "id": "rtp-noticias",
+      "name": "RTP Notícias",
+      "country": "PT",
+      "category": "news",
+      "path": "countries/pt/rtp-noticias.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RTP_Not%C3%ADcias_2026.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RTP_Not%C3%ADcias_2026.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["RTP Noticias", "RTP3", "RTP 3"]
+    },
+    {
+      "id": "rtp-africa",
+      "name": "RTP África",
+      "country": "PT",
+      "category": "general",
+      "path": "countries/pt/rtp-africa.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RTP_%C3%81frica_2026.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RTP_%C3%81frica_2026.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["RTP Africa"]
+    },
+    {
       "id": "rtp-memoria",
       "name": "RTP Memória",
       "country": "PT",
@@ -24,6 +60,42 @@
       "license": "Public domain (PD-textlogo); trademarked",
       "trademarked": true,
       "aliases": ["RTP Memoria"]
+    },
+    {
+      "id": "sic-noticias",
+      "name": "SIC Notícias",
+      "country": "PT",
+      "category": "news",
+      "path": "countries/pt/sic-noticias.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/SIC_Not%C3%ADcias_(2023).svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:SIC_Not%C3%ADcias_(2023).svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["SIC Noticias", "SIC Notícias HD"]
+    },
+    {
+      "id": "sic-mulher",
+      "name": "SIC Mulher",
+      "country": "PT",
+      "category": "general",
+      "path": "countries/pt/sic-mulher.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/SIC_Mulher_2023.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:SIC_Mulher_2023.svg",
+      "license": "CC BY-SA 4.0; trademarked",
+      "trademarked": true,
+      "aliases": ["SIC Mulher HD"]
+    },
+    {
+      "id": "cnn-portugal",
+      "name": "CNN Portugal",
+      "country": "PT",
+      "category": "news",
+      "path": "countries/pt/cnn-portugal.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/CNN_Portugal.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:CNN_Portugal.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["CNN Portugal HD"]
     }
   ]
 }

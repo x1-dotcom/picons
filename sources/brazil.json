@@ -1,0 +1,29 @@
+{
+  "country": "BR",
+  "channels": [
+    {
+      "id": "tv-globo",
+      "name": "TV Globo",
+      "country": "BR",
+      "category": "general",
+      "path": "countries/br/tv-globo.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/TV_Globo_logo_(April_2025).svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:TV_Globo_logo_(April_2025).svg",
+      "license": "Public domain (PD-textlogo / TOO-Brazil); trademarked",
+      "trademarked": true,
+      "aliases": ["Globo", "Rede Globo", "TV Globo HD"]
+    },
+    {
+      "id": "band",
+      "name": "Band",
+      "country": "BR",
+      "category": "general",
+      "path": "countries/br/band.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rede_Bandeirantes_logo_2011.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Rede_Bandeirantes_logo_2011.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["Rede Bandeirantes", "Bandeirantes", "Band HD"]
+    }
+  ]
+}

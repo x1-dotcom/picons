@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="320" viewBox="0 0 1600 320" role="img" aria-label="X1 Picons Source and Rights Gate">
+<rect width="1600" height="320" rx="24" fill="#080D12"/>
+<text x="70" y="58" font-family="Arial Black,Arial,sans-serif" font-size="34" fill="#fff">SOURCE ≠ PERMISSION</text>
+<text x="70" y="92" font-family="monospace" font-size="16" fill="#78929A" letter-spacing="4">PUBLICLY VISIBLE DOES NOT AUTOMATICALLY MEAN REDISTRIBUTABLE</text>
+<g font-family="Arial,Helvetica,sans-serif">
+  <g transform="translate(70 132)"><rect width="310" height="112" rx="14" fill="#0D171D" stroke="#20F6FF"/><text x="24" y="39" font-size="17" fill="#20F6FF">DISCOVER</text><text x="24" y="76" font-size="25" font-weight="700" fill="#fff">Find current artwork</text><text x="24" y="99" font-size="14" fill="#91A9AF">Official / licensed / documented sources</text></g>
+  <path d="M398 188h96" stroke="#294A52" stroke-width="3"/><path d="M480 178l16 10-16 10" fill="#294A52"/>
+  <g transform="translate(512 132)"><rect width="310" height="112" rx="14" fill="#0D171D" stroke="#7CFFB2"/><text x="24" y="39" font-size="17" fill="#7CFFB2">VERIFY</text><text x="24" y="76" font-size="25" font-weight="700" fill="#fff">Check provenance</text><text x="24" y="99" font-size="14" fill="#91A9AF">License · trademark note · source page</text></g>
+  <path d="M840 188h96" stroke="#294A52" stroke-width="3"/><path d="M922 178l16 10-16 10" fill="#294A52"/>
+  <g transform="translate(954 132)"><rect width="310" height="112" rx="14" fill="#0D171D" stroke="#F5FF82"/><text x="24" y="39" font-size="17" fill="#F5FF82">VALIDATE</text><text x="24" y="76" font-size="25" font-weight="700" fill="#fff">Audit the asset</text><text x="24" y="99" font-size="14" fill="#91A9AF">Path · type · size · duplicates · metadata</text></g>
+  <path d="M1282 188h76" stroke="#294A52" stroke-width="3"/><path d="M1344 178l16 10-16 10" fill="#294A52"/>
+  <g transform="translate(1376 132)"><rect width="154" height="112" rx="14" fill="#101B18" stroke="#7CFFB2"/><text x="20" y="39" font-size="16" fill="#7CFFB2">PUBLISH</text><text x="20" y="76" font-size="24" font-weight="700" fill="#fff">ONLY IF OK</text></g>
+</g>
+<text x="70" y="285" font-family="monospace" font-size="16" fill="#7CFFB2">X1 KEEPS SOURCE TRACEABILITY AND RIGHTS NOTES SEPARATE FROM VISUAL MATCHING.</text>
+</svg>

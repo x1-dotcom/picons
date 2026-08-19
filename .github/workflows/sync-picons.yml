@@ -14,6 +14,7 @@ on:
       - 'tools/coverage_report.py'
       - 'tools/audit_legacy.py'
       - 'tools/promote_migration_status.py'
+      - 'tools/compatibility_checklist.py'
       - 'tools/validate_index.py'
       - 'data/legacy-migration-pt.json'
       - '.github/workflows/sync-picons.yml'
@@ -84,6 +85,10 @@ jobs:
         if: steps.sync.outcome == 'success'
         run: python tools/promote_migration_status.py
 
+      - name: Generate Portugal compatibility checklist
+        if: steps.sync.outcome == 'success'
+        run: python tools/compatibility_checklist.py
+
       - name: Show generated coverage
         if: steps.sync.outcome == 'success'
         run: |
@@ -106,6 +111,8 @@ jobs:
           migration = json.load(open('data/legacy-migration-pt.json', encoding='utf-8'))
           status_counts = Counter(x.get('status') for x in migration.get('mappings', []))
           print('Portugal migration statuses:', dict(sorted(status_counts.items())))
+          compat = json.load(open('data/compatibility-checklist-pt.json', encoding='utf-8'))
+          print('Portugal compatibility candidates:', len(compat.get('items', [])))
           PY
 
       - name: Commit refreshed picons
@@ -117,7 +124,7 @@ jobs:
           fi
           git config user.name 'x1-picons-bot'
           git config user.email 'x1-picons-bot@users.noreply.github.com'
-          git add countries data/index.json data/sync-report.json data/coverage.json data/legacy-audit.json data/legacy-migration-pt.json ATTRIBUTION.md COVERAGE.md
+          git add countries data/index.json data/sync-report.json data/coverage.json data/legacy-audit.json data/legacy-migration-pt.json data/compatibility-checklist-pt.json ATTRIBUTION.md COVERAGE.md COMPATIBILITY_PORTUGAL.md
           git commit -m 'Sync current X1 picons'
           git pull --rebase origin main
           git push origin HEAD:main

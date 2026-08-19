@@ -1,0 +1,17 @@
+{
+  "country": "DE",
+  "channels": [
+    {
+      "id": "prosieben",
+      "name": "ProSieben",
+      "country": "DE",
+      "category": "general",
+      "path": "countries/de/prosieben.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/ProSieben_Logo_2015.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:ProSieben_Logo_2015.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["Pro 7", "Pro7", "ProSieben HD"]
+    }
+  ]
+}

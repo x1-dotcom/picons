@@ -24,6 +24,18 @@
       "license": "Public domain (PD-textlogo); trademarked",
       "trademarked": true,
       "aliases": ["BBC2", "BBC Two HD"]
+    },
+    {
+      "id": "channel-5",
+      "name": "Channel 5",
+      "country": "GB",
+      "category": "general",
+      "path": "countries/gb/channel-5.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Channel_5_2025.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Channel_5_2025.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["Channel5", "5", "Channel 5 HD"]
     }
   ]
 }

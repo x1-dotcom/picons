@@ -1,0 +1,29 @@
+{
+  "country": "GB",
+  "channels": [
+    {
+      "id": "bbc-one",
+      "name": "BBC One",
+      "country": "GB",
+      "category": "general",
+      "path": "countries/gb/bbc-one.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/BBC_One_logo_2021.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:BBC_One_logo_2021.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["BBC1", "BBC One HD"]
+    },
+    {
+      "id": "bbc-two",
+      "name": "BBC Two",
+      "country": "GB",
+      "category": "general",
+      "path": "countries/gb/bbc-two.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/BBC_Two_logo_2021.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:BBC_Two_logo_2021.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["BBC2", "BBC Two HD"]
+    }
+  ]
+}

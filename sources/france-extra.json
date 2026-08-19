@@ -1,0 +1,17 @@
+{
+  "country": "FR",
+  "channels": [
+    {
+      "id": "france-3",
+      "name": "France 3",
+      "country": "FR",
+      "category": "general",
+      "path": "countries/fr/france-3.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/France_3_-_logo_2018.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:France_3_-_logo_2018.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["France3", "France 3 HD"]
+    }
+  ]
+}

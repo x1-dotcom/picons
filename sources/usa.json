@@ -48,6 +48,30 @@
       "license": "Public domain (PD-textlogo); trademarked",
       "trademarked": true,
       "aliases": ["Fox", "FOX Network", "Fox Broadcasting Company"]
+    },
+    {
+      "id": "the-cw",
+      "name": "The CW",
+      "country": "US",
+      "category": "general",
+      "path": "countries/us/the-cw.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/The_CW_2024.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:The_CW_2024.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["CW", "The CW Network", "CW Network"]
+    },
+    {
+      "id": "pbs",
+      "name": "PBS",
+      "country": "US",
+      "category": "general",
+      "path": "countries/us/pbs.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/PBS_logo_2019.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:PBS_logo_2019.svg",
+      "license": "Public domain in the United States as listed on source page; trademarked",
+      "trademarked": true,
+      "aliases": ["Public Broadcasting Service", "PBS Network"]
     }
   ]
 }

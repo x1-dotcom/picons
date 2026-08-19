@@ -96,6 +96,102 @@
       "license": "Public domain (PD-textlogo); trademarked",
       "trademarked": true,
       "aliases": ["CNN Portugal HD"]
+    },
+    {
+      "id": "sport-tv",
+      "name": "Sport TV",
+      "country": "PT",
+      "category": "sports",
+      "path": "countries/pt/sport-tv.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sport_TV_2023.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sport_TV_2023.svg",
+      "license": "Public domain (PD-textlogo/PD-shape); trademarked",
+      "trademarked": true,
+      "aliases": ["SPORT TV"]
+    },
+    {
+      "id": "sport-tv-plus",
+      "name": "Sport TV+",
+      "country": "PT",
+      "category": "sports",
+      "path": "countries/pt/sport-tv-plus.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sport_TV%2B_(2023).svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sport_TV%2B_(2023).svg",
+      "license": "Public domain (PD-textlogo/PD-shape); trademarked",
+      "trademarked": true,
+      "aliases": ["SPORT TV+", "SportTV+"]
+    },
+    {
+      "id": "sport-tv-1",
+      "name": "Sport TV1",
+      "country": "PT",
+      "category": "sports",
+      "path": "countries/pt/sport-tv-1.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sport_TV1_(2023).svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sport_TV1_(2023).svg",
+      "license": "Public domain (PD-textlogo/PD-shape); trademarked",
+      "trademarked": true,
+      "aliases": ["SPORT TV1", "Sport TV 1", "SportTV1"]
+    },
+    {
+      "id": "sport-tv-2",
+      "name": "Sport TV2",
+      "country": "PT",
+      "category": "sports",
+      "path": "countries/pt/sport-tv-2.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sport_TV2_(2023).svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sport_TV2_(2023).svg",
+      "license": "Public domain (PD-textlogo/PD-shape); trademarked",
+      "trademarked": true,
+      "aliases": ["SPORT TV2", "Sport TV 2", "SportTV2"]
+    },
+    {
+      "id": "sport-tv-3",
+      "name": "Sport TV3",
+      "country": "PT",
+      "category": "sports",
+      "path": "countries/pt/sport-tv-3.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sport_TV3_(2023).svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sport_TV3_(2023).svg",
+      "license": "Public domain (PD-textlogo/PD-shape); trademarked",
+      "trademarked": true,
+      "aliases": ["SPORT TV3", "Sport TV 3", "SportTV3"]
+    },
+    {
+      "id": "sport-tv-4",
+      "name": "Sport TV4",
+      "country": "PT",
+      "category": "sports",
+      "path": "countries/pt/sport-tv-4.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sport_TV4_(2023).svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sport_TV4_(2023).svg",
+      "license": "Public domain (PD-textlogo/PD-shape); trademarked",
+      "trademarked": true,
+      "aliases": ["SPORT TV4", "Sport TV 4", "SportTV4"]
+    },
+    {
+      "id": "sport-tv-5",
+      "name": "Sport TV5",
+      "country": "PT",
+      "category": "sports",
+      "path": "countries/pt/sport-tv-5.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sport_TV5_(2023).svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sport_TV5_(2023).svg",
+      "license": "Public domain (PD-textlogo/PD-shape); trademarked",
+      "trademarked": true,
+      "aliases": ["SPORT TV5", "Sport TV 5", "SportTV5"]
+    },
+    {
+      "id": "sport-tv-6",
+      "name": "Sport TV6",
+      "country": "PT",
+      "category": "sports",
+      "path": "countries/pt/sport-tv-6.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sport_TV6_(2023).svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sport_TV6_(2023).svg",
+      "license": "Public domain (PD-textlogo/PD-shape); trademarked",
+      "trademarked": true,
+      "aliases": ["SPORT TV6", "Sport TV 6", "SportTV6"]
     }
   ]
 }

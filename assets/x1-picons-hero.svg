@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="460" viewBox="0 0 1600 460" role="img" aria-label="X1 Picons Visual Identity">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070B10"/><stop offset="1" stop-color="#0C1419"/></linearGradient>
+  <linearGradient id="sig" x1="0" x2="1"><stop stop-color="#20F6FF"/><stop offset=".55" stop-color="#7CFFB2"/><stop offset="1" stop-color="#F5FF82"/></linearGradient>
+  <pattern id="scan" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M0 35.5H36M35.5 0V36" stroke="#17313A" stroke-width="1" opacity=".38"/></pattern>
+</defs>
+<rect width="1600" height="460" rx="26" fill="url(#bg)"/>
+<rect width="1600" height="460" rx="26" fill="url(#scan)"/>
+<path d="M0 78H330L382 26H760" stroke="#20F6FF" stroke-width="3" fill="none"/>
+<path d="M1600 382H1280L1226 434H842" stroke="#7CFFB2" stroke-width="3" fill="none"/>
+<g transform="translate(92 92)">
+  <text x="0" y="52" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#7CFFB2" letter-spacing="8">X1 // VISUAL SIGNAL LIBRARY</text>
+  <text x="0" y="150" font-family="Arial Black,Arial,sans-serif" font-size="112" font-weight="900" fill="white">PICONS</text>
+  <rect x="0" y="176" width="650" height="5" fill="url(#sig)"/>
+  <text x="0" y="235" font-family="Arial,Helvetica,sans-serif" font-size="26" fill="#C7D8DC">Stable IDs. Country-aware assets. Source-tracked artwork.</text>
+  <text x="0" y="278" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#7F9EA6" letter-spacing="3">NO LEGACY ROOT DUMP · NO GUESSING BY FILENAME · NO SILENT RIGHTS ASSUMPTIONS</text>
+</g>
+<g transform="translate(1010 76)">
+  <rect x="0" y="0" width="430" height="300" rx="20" fill="#0A1116" stroke="#27434A" stroke-width="2"/>
+  <text x="28" y="42" font-family="monospace" font-size="18" fill="#20F6FF">SIGNAL MAP</text>
+  <g font-family="monospace" font-size="21">
+    <text x="28" y="92" fill="#EAF9FB">PT</text><text x="98" y="92" fill="#7CFFB2">PORTUGAL</text>
+    <text x="28" y="128" fill="#EAF9FB">ES</text><text x="98" y="128" fill="#7CFFB2">SPAIN</text>
+    <text x="28" y="164" fill="#EAF9FB">FR</text><text x="98" y="164" fill="#7CFFB2">FRANCE</text>
+    <text x="28" y="200" fill="#EAF9FB">DE</text><text x="98" y="200" fill="#7CFFB2">GERMANY</text>
+    <text x="28" y="236" fill="#EAF9FB">IT</text><text x="98" y="236" fill="#7CFFB2">ITALY</text>
+    <text x="28" y="272" fill="#EAF9FB">GB+</text><text x="98" y="272" fill="#F5FF82">MULTI-COUNTRY</text>
+  </g>
+</g>
+<text x="92" y="422" font-family="monospace" font-size="16" fill="#6A8B93" letter-spacing="5">X1 · VISUAL IDENTITY AS DATA</text>
+</svg>

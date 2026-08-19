@@ -13,7 +13,9 @@ on:
       - 'tools/audit_manifests.py'
       - 'tools/coverage_report.py'
       - 'tools/audit_legacy.py'
+      - 'tools/promote_migration_status.py'
       - 'tools/validate_index.py'
+      - 'data/legacy-migration-pt.json'
       - '.github/workflows/sync-picons.yml'
 
 permissions:
@@ -78,11 +80,16 @@ jobs:
         if: steps.sync.outcome == 'success'
         run: python tools/validate_index.py
 
+      - name: Promote migration materialization status
+        if: steps.sync.outcome == 'success'
+        run: python tools/promote_migration_status.py
+
       - name: Show generated coverage
         if: steps.sync.outcome == 'success'
         run: |
           python - <<'PY'
           import json
+          from collections import Counter
           coverage = json.load(open('data/coverage.json', encoding='utf-8'))
           print('Defined channels:', coverage.get('definedTotal', 0))
           print('Materialized assets:', coverage.get('materializedTotal', 0))
@@ -96,6 +103,9 @@ jobs:
           print('Legacy root PNGs:', legacy.get('rootPngCount', 0))
           print('Exact duplicate groups:', len(legacy.get('exactDuplicateGroups', [])))
           print('Visual review groups:', len(legacy.get('visualReviewGroups', [])))
+          migration = json.load(open('data/legacy-migration-pt.json', encoding='utf-8'))
+          status_counts = Counter(x.get('status') for x in migration.get('mappings', []))
+          print('Portugal migration statuses:', dict(sorted(status_counts.items())))
           PY
 
       - name: Commit refreshed picons
@@ -107,7 +117,7 @@ jobs:
           fi
           git config user.name 'x1-picons-bot'
           git config user.email 'x1-picons-bot@users.noreply.github.com'
-          git add countries data/index.json data/sync-report.json data/coverage.json data/legacy-audit.json ATTRIBUTION.md COVERAGE.md
+          git add countries data/index.json data/sync-report.json data/coverage.json data/legacy-audit.json data/legacy-migration-pt.json ATTRIBUTION.md COVERAGE.md
           git commit -m 'Sync current X1 picons'
           git pull --rebase origin main
           git push origin HEAD:main

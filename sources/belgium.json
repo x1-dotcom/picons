@@ -24,6 +24,30 @@
       "license": "Public domain (PD-textlogo); trademarked",
       "trademarked": true,
       "aliases": ["La Une", "RTBF La 1"]
+    },
+    {
+      "id": "rtl-tvi",
+      "name": "RTL-TVI",
+      "country": "BE",
+      "category": "general",
+      "path": "countries/be/rtl-tvi.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RTL-TVI_Logo_2023.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RTL-TVI_Logo_2023.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["RTL TVI", "RTL-TVI HD"]
+    },
+    {
+      "id": "play4",
+      "name": "Play4",
+      "country": "BE",
+      "category": "general",
+      "path": "countries/be/play4.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Play4_2021.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Play4_2021.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["Play 4", "Play4 HD"]
     }
   ]
 }

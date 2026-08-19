@@ -1,0 +1,29 @@
+{
+  "country": "IT",
+  "channels": [
+    {
+      "id": "rai-1",
+      "name": "Rai 1",
+      "country": "IT",
+      "category": "general",
+      "path": "countries/it/rai-1.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rai_1_-_Logo_2016.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Rai_1_-_Logo_2016.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["RAI 1", "Rai Uno", "Rai 1 HD"]
+    },
+    {
+      "id": "canale-5",
+      "name": "Canale 5",
+      "country": "IT",
+      "category": "general",
+      "path": "countries/it/canale-5.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Canale_5_-_2001_logo.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Canale_5_-_2001_logo.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["Canale5", "Canale 5 HD"]
+    }
+  ]
+}

@@ -12,6 +12,7 @@ on:
       - 'tools/sync_sources.py'
       - 'tools/audit_manifests.py'
       - 'tools/coverage_report.py'
+      - 'tools/audit_legacy.py'
       - 'tools/validate_index.py'
       - '.github/workflows/sync-picons.yml'
 
@@ -55,18 +56,22 @@ jobs:
         if: always()
         run: python tools/coverage_report.py
 
+      - name: Audit legacy root picons
+        if: always()
+        run: python tools/audit_legacy.py
+
       - name: Publish failure diagnostics
         if: steps.sync.outcome == 'failure'
         run: |
           git config user.name 'x1-picons-bot'
           git config user.email 'x1-picons-bot@users.noreply.github.com'
-          git add data/sync-report.json data/coverage.json COVERAGE.md
+          git add data/sync-report.json data/coverage.json data/legacy-audit.json COVERAGE.md
           if ! git diff --cached --quiet; then
             git commit -m 'Record X1 picon sync failure diagnostics'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
-          echo 'Picon synchronization failed; diagnostics and coverage were preserved.'
+          echo 'Picon synchronization failed; diagnostics, coverage and legacy audit were preserved.'
           exit 1
 
       - name: Validate index
@@ -87,6 +92,10 @@ jobs:
               print(f"  {row['country']}: defined={row['defined']} materialized={row['materialized']} missing={row['missing']}")
           report = json.load(open('data/sync-report.json', encoding='utf-8'))
           print('Failed sources:', report.get('failed', 0))
+          legacy = json.load(open('data/legacy-audit.json', encoding='utf-8'))
+          print('Legacy root PNGs:', legacy.get('rootPngCount', 0))
+          print('Exact duplicate groups:', len(legacy.get('exactDuplicateGroups', [])))
+          print('Visual review groups:', len(legacy.get('visualReviewGroups', [])))
           PY
 
       - name: Commit refreshed picons
@@ -98,7 +107,7 @@ jobs:
           fi
           git config user.name 'x1-picons-bot'
           git config user.email 'x1-picons-bot@users.noreply.github.com'
-          git add countries data/index.json data/sync-report.json data/coverage.json ATTRIBUTION.md COVERAGE.md
+          git add countries data/index.json data/sync-report.json data/coverage.json data/legacy-audit.json ATTRIBUTION.md COVERAGE.md
           git commit -m 'Sync current X1 picons'
           git pull --rebase origin main
           git push origin HEAD:main

@@ -12,6 +12,18 @@
       "license": "Public domain (PD-textlogo); trademarked",
       "trademarked": true,
       "aliases": ["France3", "France 3 HD"]
+    },
+    {
+      "id": "france-24",
+      "name": "France 24",
+      "country": "FR",
+      "category": "news",
+      "path": "countries/fr/france-24.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/France_24_logo_(2013).svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:France_24_logo_(2013).svg",
+      "license": "Wikimedia Commons license/status as listed on source page; trademarked",
+      "trademarked": true,
+      "aliases": ["France24", "France 24 HD", "FRANCE 24"]
     }
   ]
 }

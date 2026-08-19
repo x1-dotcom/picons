@@ -84,6 +84,30 @@
       "license": "CC BY-SA 2.5 / PD-textlogo; trademarked",
       "trademarked": true,
       "aliases": ["TDP", "Teledeporte HD"]
+    },
+    {
+      "id": "telecinco",
+      "name": "Telecinco",
+      "country": "ES",
+      "category": "general",
+      "path": "countries/es/telecinco.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Telecinco_2024_Logo.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Telecinco_2024_Logo.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["Tele 5", "Telecinco HD"]
+    },
+    {
+      "id": "cuatro",
+      "name": "Cuatro",
+      "country": "ES",
+      "category": "general",
+      "path": "countries/es/cuatro.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cuatro.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cuatro.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["Cuatro HD", "4"]
     }
   ]
 }

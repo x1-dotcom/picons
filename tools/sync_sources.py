@@ -23,7 +23,7 @@ MAX_BYTES = 5 * 1024 * 1024
 def fetch(url: str) -> bytes:
     req = urllib.request.Request(
         url,
-        headers={"User-Agent": "X1-Picons-Sync/2.0 (+https://github.com/x1-dotcom/picons)"},
+        headers={"User-Agent": "X1-Picons-Sync/2.1 (+https://github.com/x1-dotcom/picons)"},
     )
     with urllib.request.urlopen(req, timeout=30) as response:
         final_host = urllib.parse.urlparse(response.geturl()).hostname or ""
@@ -52,6 +52,8 @@ def validate_payload(item: dict, data: bytes, out: pathlib.Path) -> None:
         raise RuntimeError("expected SVG payload")
     if suffix == ".png" and not data.startswith(b"\x89PNG\r\n\x1a\n"):
         raise RuntimeError("expected PNG payload")
+    if suffix == ".webp" and not (data.startswith(b"RIFF") and b"WEBP" in data[:16]):
+        raise RuntimeError("expected WebP payload")
     if suffix not in {".svg", ".png", ".webp"}:
         raise RuntimeError(f"unsupported asset extension: {suffix}")
 
@@ -105,6 +107,7 @@ def main() -> None:
                 "category": item["category"],
                 "file": item["path"],
                 "aliases": item.get("aliases", []),
+                "status": "active",
                 "sha256": digest,
                 "license": item["license"],
                 "sourcePage": item["sourcePage"],

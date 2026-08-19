@@ -36,6 +36,30 @@
       "license": "Public domain (PD-textlogo); trademarked",
       "trademarked": true,
       "aliases": ["NPO3", "NPO 3 HD"]
+    },
+    {
+      "id": "rtl-4",
+      "name": "RTL 4",
+      "country": "NL",
+      "category": "general",
+      "path": "countries/nl/rtl-4.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RTL4_2023.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RTL4_2023.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["RTL4", "RTL 4 HD"]
+    },
+    {
+      "id": "sbs6",
+      "name": "SBS6",
+      "country": "NL",
+      "category": "general",
+      "path": "countries/nl/sbs6.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/SBS6_(2023).svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:SBS6_(2023).svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["SBS 6", "SBS6 HD"]
     }
   ]
 }

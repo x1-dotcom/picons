@@ -1,0 +1,53 @@
+{
+  "country": "PT",
+  "channels": [
+    {
+      "id": "sic-caras",
+      "name": "SIC Caras",
+      "country": "PT",
+      "category": "general",
+      "path": "countries/pt/sic-caras.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/SIC_CARAS.png",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:SIC_CARAS.png",
+      "license": "Public domain (PD-textlogo)",
+      "trademarked": true,
+      "aliases": ["SIC CARAS", "SIC Caras HD"]
+    },
+    {
+      "id": "tvi",
+      "name": "TVI",
+      "country": "PT",
+      "category": "general",
+      "path": "countries/pt/tvi.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Log%C3%B3tipo_TVI.png",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Log%C3%B3tipo_TVI.png",
+      "license": "CC BY-SA 4.0",
+      "trademarked": true,
+      "aliases": ["TVI HD", "Televisão Independente"]
+    },
+    {
+      "id": "tvi-ficcao",
+      "name": "TVI Ficção",
+      "country": "PT",
+      "category": "series",
+      "path": "countries/pt/tvi-ficcao.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/TVI_Fic%C3%A7%C3%A3o_(2017).png",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:TVI_Fic%C3%A7%C3%A3o_(2017).png",
+      "license": "Public domain (PD-textlogo/PD-shape); trademarked",
+      "trademarked": true,
+      "aliases": ["TVI Ficcao", "TVI Ficção HD"]
+    },
+    {
+      "id": "tvi-internacional",
+      "name": "TVI Internacional",
+      "country": "PT",
+      "category": "general",
+      "path": "countries/pt/tvi-internacional.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/TVI_Internacional_(2017).png",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:TVI_Internacional_(2017).png",
+      "license": "Public domain (PD-textlogo/PD-shape); trademarked",
+      "trademarked": true,
+      "aliases": ["TVI Internacional HD", "TVI INT"]
+    }
+  ]
+}

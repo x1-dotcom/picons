@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "country": "PT",
+  "policy": "Entries in this file are explicit owner compatibility approvals. Automation may promote a mapping to READY_FOR_REMOVAL only when every required check is true and the current modern asset still matches data/index.json by path and SHA-256. This file never deletes assets by itself.",
+  "approvals": []
+}

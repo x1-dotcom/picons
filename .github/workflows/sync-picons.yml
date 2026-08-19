@@ -11,6 +11,7 @@ on:
       - 'sources/*.json'
       - 'tools/sync_sources.py'
       - 'tools/audit_manifests.py'
+      - 'tools/coverage_report.py'
       - 'tools/validate_index.py'
       - '.github/workflows/sync-picons.yml'
 
@@ -50,18 +51,22 @@ jobs:
         continue-on-error: true
         run: python tools/sync_sources.py
 
+      - name: Generate coverage matrix
+        if: always()
+        run: python tools/coverage_report.py
+
       - name: Publish failure diagnostics
         if: steps.sync.outcome == 'failure'
         run: |
-          if [ -f data/sync-report.json ] && ! git diff --quiet -- data/sync-report.json; then
-            git config user.name 'x1-picons-bot'
-            git config user.email 'x1-picons-bot@users.noreply.github.com'
-            git add data/sync-report.json
+          git config user.name 'x1-picons-bot'
+          git config user.email 'x1-picons-bot@users.noreply.github.com'
+          git add data/sync-report.json data/coverage.json COVERAGE.md
+          if ! git diff --cached --quiet; then
             git commit -m 'Record X1 picon sync failure diagnostics'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
-          echo 'Picon synchronization failed; diagnostics were preserved.'
+          echo 'Picon synchronization failed; diagnostics and coverage were preserved.'
           exit 1
 
       - name: Validate index
@@ -73,11 +78,13 @@ jobs:
         run: |
           python - <<'PY'
           import json
-          from collections import Counter
-          data = json.load(open('data/index.json', encoding='utf-8'))
-          channels = data.get('channels', [])
-          print('Total channels:', len(channels))
-          print('By country:', dict(sorted(Counter(x['country'] for x in channels).items())))
+          coverage = json.load(open('data/coverage.json', encoding='utf-8'))
+          print('Defined channels:', coverage.get('definedTotal', 0))
+          print('Materialized assets:', coverage.get('materializedTotal', 0))
+          print('Missing assets:', coverage.get('missingTotal', 0))
+          print('By country:')
+          for row in coverage.get('countries', []):
+              print(f"  {row['country']}: defined={row['defined']} materialized={row['materialized']} missing={row['missing']}")
           report = json.load(open('data/sync-report.json', encoding='utf-8'))
           print('Failed sources:', report.get('failed', 0))
           PY
@@ -91,7 +98,7 @@ jobs:
           fi
           git config user.name 'x1-picons-bot'
           git config user.email 'x1-picons-bot@users.noreply.github.com'
-          git add countries data/index.json data/sync-report.json ATTRIBUTION.md
+          git add countries data/index.json data/sync-report.json data/coverage.json ATTRIBUTION.md COVERAGE.md
           git commit -m 'Sync current X1 picons'
           git pull --rebase origin main
           git push origin HEAD:main

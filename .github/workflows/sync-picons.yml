@@ -2,6 +2,8 @@ name: Sync X1 Picons
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
   push:
     branches:
       - main

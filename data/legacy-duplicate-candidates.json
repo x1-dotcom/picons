@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "policy": "Candidates only. Do not delete until compatibility migration is proven.",
+  "byteIdentical": [
+    {
+      "files": ["amc.png", "amx.png"],
+      "gitBlobSha": "4bb51a1ccaf3f353f96fed7c54d2e4cc549c2753",
+      "classification": "BYTE_IDENTICAL",
+      "action": "REVIEW_ALIAS_BEFORE_REMOVAL"
+    }
+  ],
+  "nameDuplicateCandidates": [
+    {
+      "files": ["axnmovies.png", "axnmovies (2).png"],
+      "classification": "SEMANTIC_OR_VISUAL_DUPLICATE_UNPROVEN",
+      "action": "COMPARE_BEFORE_MIGRATION"
+    },
+    {
+      "files": ["axnwhite.png", "axnwhite (2).png"],
+      "classification": "SEMANTIC_OR_VISUAL_DUPLICATE_UNPROVEN",
+      "action": "COMPARE_BEFORE_MIGRATION"
+    }
+  ]
+}

@@ -17,6 +17,7 @@ on:
       - 'tools/compatibility_checklist.py'
       - 'tools/promote_removal_status.py'
       - 'tools/removal_dry_run.py'
+      - 'tools/remove_legacy_pt.py'
       - 'tools/validate_index.py'
       - 'data/legacy-migration-pt.json'
       - 'data/removal-approvals-pt.json'
@@ -100,6 +101,10 @@ jobs:
         if: steps.sync.outcome == 'success'
         run: python tools/removal_dry_run.py
 
+      - name: Validate guarded removal executor in default dry-run mode
+        if: steps.sync.outcome == 'success'
+        run: python tools/remove_legacy_pt.py
+
       - name: Show generated coverage
         if: steps.sync.outcome == 'success'
         run: |
@@ -129,6 +134,11 @@ jobs:
           dry = json.load(open('data/removal-dry-run-pt.json', encoding='utf-8'))
           print('Portugal dry-run deletion candidates:', dry.get('candidateCount', 0))
           print('Portugal dry-run blocked:', dry.get('blockedCount', 0))
+          receipt = json.load(open('data/removal-receipt-pt.json', encoding='utf-8'))
+          print('Removal executor mode:', receipt.get('mode'))
+          print('Removal executor eligible:', receipt.get('eligibleCount', 0))
+          print('Removal executor blocked:', receipt.get('blockedCount', 0))
+          print('Removal executor removed:', receipt.get('removedCount', 0))
           PY
 
       - name: Commit refreshed picons
@@ -140,7 +150,7 @@ jobs:
           fi
           git config user.name 'x1-picons-bot'
           git config user.email 'x1-picons-bot@users.noreply.github.com'
-          git add countries data/index.json data/sync-report.json data/coverage.json data/legacy-audit.json data/legacy-migration-pt.json data/compatibility-checklist-pt.json data/removal-dry-run-pt.json ATTRIBUTION.md COVERAGE.md COMPATIBILITY_PORTUGAL.md REMOVAL_DRY_RUN_PORTUGAL.md
+          git add countries data/index.json data/sync-report.json data/coverage.json data/legacy-audit.json data/legacy-migration-pt.json data/compatibility-checklist-pt.json data/removal-dry-run-pt.json data/removal-receipt-pt.json ATTRIBUTION.md COVERAGE.md COMPATIBILITY_PORTUGAL.md REMOVAL_DRY_RUN_PORTUGAL.md
           git commit -m 'Sync current X1 picons'
           git pull --rebase origin main
           git push origin HEAD:main

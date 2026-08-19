@@ -2,6 +2,42 @@
   "country": "ES",
   "channels": [
     {
+      "id": "la-1",
+      "name": "La 1",
+      "country": "ES",
+      "category": "general",
+      "path": "countries/es/la-1.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/La_1_2026.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:La_1_2026.svg",
+      "license": "CC BY-SA 2.5 / PD-textlogo; trademarked",
+      "trademarked": true,
+      "aliases": ["TVE1", "La1", "La 1 HD"]
+    },
+    {
+      "id": "la-2",
+      "name": "La 2",
+      "country": "ES",
+      "category": "general",
+      "path": "countries/es/la-2.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/La_2_2026.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:La_2_2026.svg",
+      "license": "CC BY-SA 2.5 / PD-textlogo; trademarked",
+      "trademarked": true,
+      "aliases": ["TVE2", "La2", "La 2 HD"]
+    },
+    {
+      "id": "canal-24-horas",
+      "name": "Canal 24 Horas",
+      "country": "ES",
+      "category": "news",
+      "path": "countries/es/canal-24-horas.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/24h_2026.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:24h_2026.svg",
+      "license": "CC BY-SA 2.5; trademarked",
+      "trademarked": true,
+      "aliases": ["24h", "24 Horas", "Canal 24h"]
+    },
+    {
       "id": "antena-3",
       "name": "Antena 3",
       "country": "ES",

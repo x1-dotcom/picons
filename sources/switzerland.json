@@ -1,0 +1,41 @@
+{
+  "country": "CH",
+  "channels": [
+    {
+      "id": "srf-1",
+      "name": "SRF 1",
+      "country": "CH",
+      "category": "general",
+      "path": "countries/ch/srf-1.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Logo_SRF_1.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Logo_SRF_1.svg",
+      "license": "Wikimedia Commons license/status as listed on source page; trademarked",
+      "trademarked": true,
+      "aliases": ["SRF1", "SRF 1 HD"]
+    },
+    {
+      "id": "rts-1",
+      "name": "RTS 1",
+      "country": "CH",
+      "category": "general",
+      "path": "countries/ch/rts-1.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RTS_1_Logo_2023.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RTS_1_Logo_2023.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["RTS1", "RTS Un", "RTS 1 HD"]
+    },
+    {
+      "id": "rsi-la-1",
+      "name": "RSI La 1",
+      "country": "CH",
+      "category": "general",
+      "path": "countries/ch/rsi-la-1.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RSI_La_1.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RSI_La_1.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["RSI LA 1", "RSI La1"]
+    }
+  ]
+}

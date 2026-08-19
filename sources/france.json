@@ -1,0 +1,29 @@
+{
+  "country": "FR",
+  "channels": [
+    {
+      "id": "france-2",
+      "name": "France 2",
+      "country": "FR",
+      "category": "general",
+      "path": "countries/fr/france-2.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/France_2_logo.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:France_2_logo.svg",
+      "license": "Wikimedia Commons license/status as listed on source page; trademarked",
+      "trademarked": true,
+      "aliases": ["France2", "France 2 HD"]
+    },
+    {
+      "id": "m6",
+      "name": "M6",
+      "country": "FR",
+      "category": "general",
+      "path": "countries/fr/m6.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Logo_M6_(2020).svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Logo_M6_(2020).svg",
+      "license": "Wikimedia Commons license/status as listed on source page; trademarked",
+      "trademarked": true,
+      "aliases": ["M6 HD"]
+    }
+  ]
+}

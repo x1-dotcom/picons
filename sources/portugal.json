@@ -1,0 +1,29 @@
+{
+  "country": "PT",
+  "channels": [
+    {
+      "id": "rtp-1",
+      "name": "RTP 1",
+      "country": "PT",
+      "category": "general",
+      "path": "countries/pt/rtp-1.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RTP1_2026.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RTP1_2026.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["RTP1", "RTP 1 HD"]
+    },
+    {
+      "id": "rtp-memoria",
+      "name": "RTP Memória",
+      "country": "PT",
+      "category": "general",
+      "path": "countries/pt/rtp-memoria.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RTP_Mem%C3%B3ria_2026.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RTP_Mem%C3%B3ria_2026.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["RTP Memoria"]
+    }
+  ]
+}

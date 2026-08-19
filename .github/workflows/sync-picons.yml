@@ -54,6 +54,8 @@ jobs:
           channels = data.get('channels', [])
           print('Total channels:', len(channels))
           print('By country:', dict(sorted(Counter(x['country'] for x in channels).items())))
+          report = json.load(open('data/sync-report.json', encoding='utf-8'))
+          print('Failed sources:', report.get('failed', 0))
           PY
 
       - name: Commit refreshed picons
@@ -64,7 +66,7 @@ jobs:
           fi
           git config user.name 'x1-picons-bot'
           git config user.email 'x1-picons-bot@users.noreply.github.com'
-          git add countries data/index.json ATTRIBUTION.md
+          git add countries data/index.json data/sync-report.json ATTRIBUTION.md
           git commit -m 'Sync current X1 picons'
           git pull --rebase origin main
           git push origin HEAD:main

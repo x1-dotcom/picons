@@ -4,6 +4,8 @@ from __future__ import annotations
 import hashlib
 import json
 import pathlib
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
@@ -18,21 +20,33 @@ ALLOWED_HOSTS = {
     "upload.wikimedia.org",
 }
 MAX_BYTES = 5 * 1024 * 1024
+MAX_ATTEMPTS = 3
 
 
 def fetch(url: str) -> bytes:
-    req = urllib.request.Request(
-        url,
-        headers={"User-Agent": "X1-Picons-Sync/2.1 (+https://github.com/x1-dotcom/picons)"},
-    )
-    with urllib.request.urlopen(req, timeout=30) as response:
-        final_host = urllib.parse.urlparse(response.geturl()).hostname or ""
-        if final_host not in ALLOWED_HOSTS:
-            raise RuntimeError(f"Unexpected redirect host: {final_host}")
-        data = response.read(MAX_BYTES + 1)
-        if len(data) > MAX_BYTES:
-            raise RuntimeError("Asset exceeds 5 MiB limit")
-        return data
+    last_error: Exception | None = None
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        try:
+            req = urllib.request.Request(
+                url,
+                headers={
+                    "User-Agent": "X1-Picons-Sync/2.1 (+https://github.com/x1-dotcom/picons)",
+                    "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                },
+            )
+            with urllib.request.urlopen(req, timeout=30) as response:
+                final_host = urllib.parse.urlparse(response.geturl()).hostname or ""
+                if final_host not in ALLOWED_HOSTS:
+                    raise RuntimeError(f"Unexpected redirect host: {final_host}")
+                data = response.read(MAX_BYTES + 1)
+                if len(data) > MAX_BYTES:
+                    raise RuntimeError("Asset exceeds 5 MiB limit")
+                return data
+        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, RuntimeError) as exc:
+            last_error = exc
+            if attempt < MAX_ATTEMPTS:
+                time.sleep(attempt * 2)
+    raise RuntimeError(f"download failed after {MAX_ATTEMPTS} attempts: {last_error}")
 
 
 def load_sources():
@@ -52,7 +66,7 @@ def validate_payload(item: dict, data: bytes, out: pathlib.Path) -> None:
         raise RuntimeError("expected SVG payload")
     if suffix == ".png" and not data.startswith(b"\x89PNG\r\n\x1a\n"):
         raise RuntimeError("expected PNG payload")
-    if suffix == ".webp" and not (data.startswith(b"RIFF") and b"WEBP" in data[:16]):
+    if suffix == ".webp" and not (len(data) >= 12 and data[:4] == b"RIFF" and data[8:12] == b"WEBP"):
         raise RuntimeError("expected WebP payload")
     if suffix not in {".svg", ".png", ".webp"}:
         raise RuntimeError(f"unsupported asset extension: {suffix}")

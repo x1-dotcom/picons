@@ -15,8 +15,10 @@ on:
       - 'tools/audit_legacy.py'
       - 'tools/promote_migration_status.py'
       - 'tools/compatibility_checklist.py'
+      - 'tools/promote_removal_status.py'
       - 'tools/validate_index.py'
       - 'data/legacy-migration-pt.json'
+      - 'data/removal-approvals-pt.json'
       - '.github/workflows/sync-picons.yml'
 
 permissions:
@@ -89,6 +91,10 @@ jobs:
         if: steps.sync.outcome == 'success'
         run: python tools/compatibility_checklist.py
 
+      - name: Apply explicit Portugal removal approvals
+        if: steps.sync.outcome == 'success'
+        run: python tools/promote_removal_status.py
+
       - name: Show generated coverage
         if: steps.sync.outcome == 'success'
         run: |
@@ -113,6 +119,8 @@ jobs:
           print('Portugal migration statuses:', dict(sorted(status_counts.items())))
           compat = json.load(open('data/compatibility-checklist-pt.json', encoding='utf-8'))
           print('Portugal compatibility candidates:', len(compat.get('items', [])))
+          approvals = json.load(open('data/removal-approvals-pt.json', encoding='utf-8'))
+          print('Explicit removal approvals:', len(approvals.get('approvals', [])))
           PY
 
       - name: Commit refreshed picons

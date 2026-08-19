@@ -30,7 +30,7 @@ def fetch(url: str) -> bytes:
             req = urllib.request.Request(
                 url,
                 headers={
-                    "User-Agent": "X1-Picons-Sync/2.1 (+https://github.com/x1-dotcom/picons)",
+                    "User-Agent": "X1-Picons-Sync/2.2 (+https://github.com/x1-dotcom/picons)",
                     "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
                 },
             )
@@ -151,6 +151,27 @@ def main() -> None:
     now = datetime.now(timezone.utc).isoformat()
     channels.sort(key=lambda x: (x["country"], x["name"].casefold(), x["id"]))
 
+    # Always persist diagnostics. This is intentionally written before the
+    # fail-closed catalog guard so CI can publish useful failure evidence.
+    REPORT.write_text(
+        json.dumps({
+            "generatedAt": now,
+            "requested": len(entries),
+            "synced": len(channels),
+            "failed": len(failures),
+            "catalogPublished": bool(channels),
+            "failures": failures,
+        }, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+
+    print(f"Requested {len(entries)} · synced {len(channels)} · failed {len(failures)}")
+
+    # Fail closed: never replace the last known-good catalog/attribution with
+    # an empty result merely because upstream downloads are unavailable.
+    if not channels:
+        raise SystemExit("No picons were synchronized; preserving last known-good catalog")
+
     INDEX.write_text(
         json.dumps({
             "schemaVersion": 1,
@@ -159,23 +180,7 @@ def main() -> None:
         }, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
-
-    REPORT.write_text(
-        json.dumps({
-            "generatedAt": now,
-            "requested": len(entries),
-            "synced": len(channels),
-            "failed": len(failures),
-            "failures": failures,
-        }, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
-    )
-
     ATTR.write_text("\n".join(attribution), encoding="utf-8")
-    print(f"Requested {len(entries)} · synced {len(channels)} · failed {len(failures)}")
-
-    if not channels:
-        raise SystemExit("No picons were synchronized; refusing to publish an empty catalog")
 
 
 if __name__ == "__main__":

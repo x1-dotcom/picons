@@ -1,0 +1,53 @@
+{
+  "country": "ES",
+  "channels": [
+    {
+      "id": "antena-3",
+      "name": "Antena 3",
+      "country": "ES",
+      "category": "general",
+      "path": "countries/es/antena-3.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Antena_3_2025_(sin_wordmark).svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Antena_3_2025_(sin_wordmark).svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["Antena3", "A3"]
+    },
+    {
+      "id": "lasexta",
+      "name": "laSexta",
+      "country": "ES",
+      "category": "general",
+      "path": "countries/es/lasexta.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/LaSexta_2024_Logo.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:LaSexta_2024_Logo.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["La Sexta", "la sexta"]
+    },
+    {
+      "id": "clan",
+      "name": "Clan",
+      "country": "ES",
+      "category": "kids",
+      "path": "countries/es/clan.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Clan_2026.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Clan_2026.svg",
+      "license": "CC BY-SA 2.5; trademarked",
+      "trademarked": true,
+      "aliases": ["Clan TVE", "Clan HD"]
+    },
+    {
+      "id": "teledeporte",
+      "name": "Teledeporte",
+      "country": "ES",
+      "category": "sports",
+      "path": "countries/es/teledeporte.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/TDP_2026.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:TDP_2026.svg",
+      "license": "CC BY-SA 2.5 / PD-textlogo; trademarked",
+      "trademarked": true,
+      "aliases": ["TDP", "Teledeporte HD"]
+    }
+  ]
+}

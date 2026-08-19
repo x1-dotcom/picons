@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://x1panel.space/schemas/picons-index-v1.json",
+  "title": "X1 Picons Index",
+  "type": "object",
+  "required": ["schemaVersion", "generatedAt", "channels"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "generatedAt": { "type": "string" },
+    "channels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "country", "category", "file", "aliases", "status"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+          "name": { "type": "string", "minLength": 1 },
+          "country": { "type": "string", "pattern": "^[A-Z]{2}$" },
+          "category": { "type": "string", "enum": ["general", "sports", "movies", "kids", "news", "music", "documentary", "lifestyle", "regional", "other"] },
+          "file": { "type": "string", "pattern": "^(countries|categories)/.+\\.(png|webp)$" },
+          "aliases": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "status": { "type": "string", "enum": ["active", "legacy", "deprecated"] },
+          "source": { "type": ["string", "null"] },
+          "sourceLicense": { "type": ["string", "null"] },
+          "notes": { "type": ["string", "null"] },
+          "legacyFiles": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -46,12 +46,30 @@ jobs:
         run: python tools/audit_manifests.py
 
       - name: Sync approved picon sources
+        id: sync
+        continue-on-error: true
         run: python tools/sync_sources.py
 
+      - name: Publish failure diagnostics
+        if: steps.sync.outcome == 'failure'
+        run: |
+          if [ -f data/sync-report.json ] && ! git diff --quiet -- data/sync-report.json; then
+            git config user.name 'x1-picons-bot'
+            git config user.email 'x1-picons-bot@users.noreply.github.com'
+            git add data/sync-report.json
+            git commit -m 'Record X1 picon sync failure diagnostics'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+          echo 'Picon synchronization failed; diagnostics were preserved.'
+          exit 1
+
       - name: Validate index
+        if: steps.sync.outcome == 'success'
         run: python tools/validate_index.py
 
       - name: Show generated coverage
+        if: steps.sync.outcome == 'success'
         run: |
           python - <<'PY'
           import json
@@ -65,6 +83,7 @@ jobs:
           PY
 
       - name: Commit refreshed picons
+        if: steps.sync.outcome == 'success'
         run: |
           if git diff --quiet && [ -z "$(git status --porcelain)" ]; then
             echo 'No picon changes'

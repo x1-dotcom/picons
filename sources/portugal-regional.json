@@ -1,0 +1,29 @@
+{
+  "country": "PT",
+  "channels": [
+    {
+      "id": "rtp-acores",
+      "name": "RTP Açores",
+      "country": "PT",
+      "category": "general",
+      "path": "countries/pt/rtp-acores.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RTP_A%C3%A7ores_2026.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RTP_A%C3%A7ores_2026.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["RTP Acores", "RTP Açores HD"]
+    },
+    {
+      "id": "rtp-madeira",
+      "name": "RTP Madeira",
+      "country": "PT",
+      "category": "general",
+      "path": "countries/pt/rtp-madeira.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RTP_Madeira_2026.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RTP_Madeira_2026.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["RTP Madeira HD"]
+    }
+  ]
+}

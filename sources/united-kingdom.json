@@ -1,0 +1,29 @@
+{
+  "country": "GB",
+  "channels": [
+    {
+      "id": "itv1",
+      "name": "ITV1",
+      "country": "GB",
+      "category": "general",
+      "path": "countries/gb/itv1.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/ITV1_Logo_2022.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:ITV1_Logo_2022.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["ITV", "ITV1 HD"]
+    },
+    {
+      "id": "channel-4",
+      "name": "Channel 4",
+      "country": "GB",
+      "category": "general",
+      "path": "countries/gb/channel-4.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Channel_4_2022.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Channel_4_2022.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["Channel4", "C4", "Channel 4 HD"]
+    }
+  ]
+}

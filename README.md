@@ -2,7 +2,7 @@
 
 Modern, structured channel-logo library for the X1 ecosystem.
 
-> **Migration status:** the historical PNG files in the repository root are preserved for compatibility while the new international library is populated and validated. Nothing from the legacy set is deleted until migration is confirmed.
+> **Migration status:** the historical PNG files in the repository root are preserved for compatibility while the new international library is populated and validated. Legacy files are removed only after duplicate/replacement coverage is confirmed.
 
 ## New library structure
 
@@ -26,21 +26,25 @@ picons/
 │   ├── kids/
 │   ├── news/
 │   └── music/
+├── sources/         # approved source manifests
 ├── data/
 │   ├── schema.json
 │   ├── index.json
+│   ├── sync-report.json
 │   └── legacy-duplicate-candidates.json
 ├── tools/
+│   ├── audit_manifests.py
+│   ├── sync_sources.py
 │   └── validate_index.py
 └── legacy root PNGs (temporary compatibility)
 ```
 
 ## Asset standard
 
-New picons should use:
+New picons may use:
 
+- SVG where a clean vector source is available
 - PNG or WebP with transparency where appropriate
-- a consistent visual canvas
 - lowercase file names
 - ASCII-safe slugs
 - no spaces
@@ -51,15 +55,21 @@ New picons should use:
 Recommended naming examples:
 
 ```text
-rtp-1.png
-sic.png
-tve-1.png
-antena-3.png
-tf1.png
-rai-1.png
-bbc-one.png
-sky-sports-main-event.png
+rtp-1.svg
+sic-noticias.svg
+la-1.svg
+antena-3.svg
+france-2.svg
+rai-1.svg
+bbc-one.svg
+sport-tv-1.svg
 ```
+
+## Source manifests
+
+Every modern picon starts from an approved `sources/*.json` manifest. Each channel definition records its stable ID, country, category, target path, source URL, source page, licensing/status note, trademark flag and aliases.
+
+`tools/audit_manifests.py` validates the manifests before any network download. It rejects malformed JSON, duplicate IDs or output paths, unsafe paths, non-HTTPS sources, unsupported hosts/extensions, country/path mismatches and alias collisions.
 
 ## Canonical metadata
 
@@ -73,25 +83,30 @@ Example:
   "name": "BBC One",
   "country": "GB",
   "category": "general",
-  "file": "countries/gb/bbc-one.png",
+  "file": "countries/gb/bbc-one.svg",
   "aliases": ["BBC1", "BBC One HD"]
 }
 ```
 
+## Automated synchronization
+
+The GitHub workflow audits source manifests, downloads approved assets, validates payload type and size, computes SHA-256, regenerates `data/index.json`, writes `data/sync-report.json` and maintains `ATTRIBUTION.md`.
+
+The sync is configured for manual execution, manifest/tool changes and a six-hour schedule.
+
 ## Migration policy
 
-1. Keep all historical root files untouched.
-2. Add current logos into the new structure.
-3. Add validated metadata to `data/index.json`.
-4. Detect byte-identical and semantic duplicates.
-5. Verify consumers can resolve the new paths.
-6. Only then deprecate or remove legacy assets in a separate reviewed change.
+1. Keep historical root assets while they are still needed for compatibility.
+2. Add current logos through approved source manifests.
+3. Materialize and validate assets in `countries/<cc>/`.
+4. Generate the canonical `data/index.json`.
+5. Detect byte-identical and semantic duplicates.
+6. Verify consumers can resolve the new paths.
+7. Remove obsolete legacy assets only when replacement or duplicate status is confirmed.
 
 See [MIGRATION.md](./MIGRATION.md).
 
 ## Countries — first wave
-
-The first international expansion targets:
 
 **Portugal · Spain · France · Italy · Germany · United Kingdom · Switzerland · Belgium · Netherlands · Brazil · USA**
 

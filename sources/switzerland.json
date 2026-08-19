@@ -14,6 +14,18 @@
       "aliases": ["SRF1", "SRF 1 HD"]
     },
     {
+      "id": "srf-zwei",
+      "name": "SRF zwei",
+      "country": "CH",
+      "category": "general",
+      "path": "countries/ch/srf-zwei.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Logo_SRF_zwei.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Logo_SRF_zwei.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["SRF2", "SRF 2", "SRF zwei HD"]
+    },
+    {
       "id": "rts-1",
       "name": "RTS 1",
       "country": "CH",
@@ -26,6 +38,18 @@
       "aliases": ["RTS1", "RTS Un", "RTS 1 HD"]
     },
     {
+      "id": "rts-2",
+      "name": "RTS 2",
+      "country": "CH",
+      "category": "general",
+      "path": "countries/ch/rts-2.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RTS_2_Logo_2023.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RTS_2_Logo_2023.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["RTS2", "RTS Deux", "RTS 2 HD"]
+    },
+    {
       "id": "rsi-la-1",
       "name": "RSI La 1",
       "country": "CH",
@@ -36,6 +60,18 @@
       "license": "Public domain (PD-textlogo); trademarked",
       "trademarked": true,
       "aliases": ["RSI LA 1", "RSI La1"]
+    },
+    {
+      "id": "rsi-la-2",
+      "name": "RSI La 2",
+      "country": "CH",
+      "category": "general",
+      "path": "countries/ch/rsi-la-2.svg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RSI_La_2.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:RSI_La_2.svg",
+      "license": "Public domain (PD-textlogo); trademarked",
+      "trademarked": true,
+      "aliases": ["RSI LA 2", "RSI La2"]
     }
   ]
 }

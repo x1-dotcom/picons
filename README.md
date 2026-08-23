@@ -2,9 +2,29 @@
   <img src="./assets/x1-picons-hero.svg" alt="X1 Picons" width="100%" />
 </p>
 
-# X1 Picons
+<p align="center">
+  <strong>PUBLIC · COMMUNITY · VISUAL DATA</strong><br>
+  Stable channel identity, country-aware artwork, source traceability and explicit rights notes.
+</p>
+
+<p align="center">
+  <a href="https://x1panel.space"><strong>WEBSITE</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://forum.x1panel.space"><strong>FORUM</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://discord.gg/vSSw6jHmw"><strong>DISCORD</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://t.me/+XkuQS_QuD6g4Nzc0"><strong>TELEGRAM</strong></a>
+</p>
+
+---
+
+## X1 Picons
 
 **X1 Picons is the public visual-signal catalogue used across the X1 ecosystem.**
+
+> **Free means functional.**
+> The public project is intended to be useful as released while keeping identity, provenance and rights explicit.
 
 It is built around stable channel identities, country-aware organization, source traceability and explicit rights notes — not around an uncontrolled folder of logo files.
 
@@ -12,15 +32,13 @@ It is built around stable channel identities, country-aware organization, source
 
 ---
 
-## X1 model
-
 <p align="center">
   <img src="./assets/x1-picons-model.svg" alt="X1 Picons Canonical Model" width="100%" />
 </p>
 
-A picon is not identified by whatever filename happens to exist today.
+## Canonical model
 
-X1 treats the stable channel identity as the primary key. Artwork can change without forcing consuming applications to change their canonical channel IDs.
+A picon is not identified by whatever filename happens to exist today. X1 treats the stable channel identity as the primary key. Artwork can change without forcing consuming applications to change their canonical channel IDs.
 
 Typical identity fields include:
 
@@ -34,6 +52,16 @@ Typical identity fields include:
 - trademark note where relevant.
 
 Consumers should resolve assets by **ID + country + aliases**, not by guessing filenames.
+
+---
+
+## Operating model
+
+`IDENTIFY` → `SOURCE` → `AUDIT` → `MATERIALIZE` → `VALIDATE` → `PUBLISH WHEN ALLOWED`
+
+> **Manifest present ≠ asset materialized ≠ consumer verified.**
+
+Each state should be proven independently.
 
 ---
 
@@ -109,11 +137,11 @@ sport-tv-1.svg
 
 ---
 
-## Source and rights gate
-
 <p align="center">
   <img src="./assets/x1-picons-rights.svg" alt="X1 Picons Source and Rights Gate" width="100%" />
 </p>
+
+## Source / rights boundary
 
 Finding a current logo online does **not** automatically prove redistribution rights.
 
@@ -130,9 +158,7 @@ Where redistribution permission is not clear, the correct state is **unresolved 
 
 ## Manifest validation
 
-`tools/audit_manifests.py` validates the structured source manifests before synchronization.
-
-The validation layer is intended to catch issues such as:
+`tools/audit_manifests.py` validates the structured source manifests before synchronization and is intended to catch:
 
 - malformed JSON;
 - duplicate stable IDs;
@@ -143,15 +169,11 @@ The validation layer is intended to catch issues such as:
 - alias collisions;
 - unsupported payload assumptions.
 
-This keeps identity and provenance errors out of the materialized catalogue.
-
 ---
 
 ## Canonical metadata
 
 `data/index.json` is designed to be the machine-readable catalogue authority once assets are materialized and validated.
-
-Example model:
 
 ```json
 {
@@ -164,29 +186,21 @@ Example model:
 }
 ```
 
-**Important:** source manifests existing in Git does not by itself prove that every corresponding asset is already materialized into the current index. Runtime/materialization state must be verified separately.
+Source manifests existing in Git do not by themselves prove that every corresponding asset is already materialized into the current index. Runtime/materialization state must be verified separately.
 
 ---
 
 ## Synchronization
 
-The synchronization tooling is responsible for auditing manifests, downloading approved source assets, validating payloads, calculating hashes, refreshing catalogue metadata and producing operational reports.
+The synchronization tooling audits manifests, downloads approved source assets, validates payloads, calculates hashes, refreshes catalogue metadata and produces operational reports.
 
 See [`RUN_SYNC.md`](./RUN_SYNC.md) for the operational procedure.
-
-The repository follows a simple evidence rule:
-
-> **Manifest present ≠ asset materialized ≠ consumer verified.**
-
-Each state should be proven independently.
 
 ---
 
 ## Relationship with X1 EPG
 
-X1 Picons and X1 EPG can share stable canonical channel identities where appropriate.
-
-That gives X1 consumers a clean separation:
+X1 Picons and X1 EPG can share stable canonical channel identities where appropriate:
 
 ```text
 CHANNEL ID
@@ -196,22 +210,28 @@ CHANNEL ID
 
 Artwork can evolve without changing guide identity, and EPG source changes do not need to rename visual assets.
 
-[X1 EPG](https://github.com/x1-dotcom/x1epg)
+---
+
+## Related X1 systems
+
+- [X1 GitHub](https://github.com/x1-dotcom)
+- [X1 EPG](https://github.com/x1-dotcom/x1epg)
+- [X1 Stream Manager Community](https://github.com/x1-dotcom/X1-Stream-Manager-Community)
 
 ---
 
-## Public project principle
+## Community
 
-This repository is part of X1's public software work.
-
-The goal is a usable, structured public catalogue — not a deliberately incomplete demo whose missing functionality exists only behind a paid unlock.
-
-At the same time, channel names and logos can be protected by copyright and/or trademark. Public availability is not treated as automatic permission to redistribute.
+- Website — https://x1panel.space
+- Forum — https://forum.x1panel.space
+- Discord — https://discord.gg/vSSw6jHmw
+- Telegram — https://t.me/+XkuQS_QuD6g4Nzc0
 
 ---
 
 <p align="center">
-  <strong>IDENTITY FIRST. ARTWORK SECOND.</strong><br>
-  <strong>SOURCE TRACKED. RIGHTS EXPLICIT.</strong><br><br>
-  <strong>X1 // VISUAL SIGNAL LIBRARY</strong>
+  <strong>IDENTITY FIRST. ARTWORK SECOND. SOURCE TRACKED. RIGHTS EXPLICIT.</strong><br><br>
+  <strong>X1 // SOFTWARE · SYSTEMS · OPERATIONS</strong><br><br>
+  PUBLIC SOFTWARE. PRIVATE ENGINEERING. ONE X1 IDENTITY.<br><br>
+  <strong>© X1Tech Solutions SA · All Rights Reserved</strong>
 </p>

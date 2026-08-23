@@ -30,6 +30,10 @@ It is built around stable channel identities, country-aware organization, source
 
 > **Current migration state:** the old root PNG dump has been removed. The repository now uses the structured X1 layout under `countries/`, `categories/`, `sources/`, `data/` and `tools/`.
 
+<p align="center">
+  <img src="./assets/x1-picons-capabilities.svg" alt="X1 Picons capability surface" width="100%" />
+</p>
+
 ---
 
 <p align="center">
